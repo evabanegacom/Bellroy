@@ -4,8 +4,8 @@ import './form.css';
 import { userResult } from '../actions/action';
 
 const initialState = {
-    name: 'Precious',
-    email: 'udegbue69@gmail.com',
+    NAME: 'Precious',
+    EMAIL: 'udegbue69@gmail.com',
     "EXTRAVERSION": {
         "Overall Score": 45,
         Facets: {
