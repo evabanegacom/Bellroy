@@ -4,7 +4,7 @@ const resultError = error => ({ type: 'SET_ERROR', error})
 
 const submitResult = 'https://recruitbot.trikeapps.com/api/v1/roles/bellroy-tech-team-recruit/big_five_profile_submissions'
 
-export const userBooking = userInfo => async dispatch => {
+export const userResult = userInfo => async dispatch => {
     await fetch(submitResult, {
       method: 'POST',
       headers: {
@@ -14,10 +14,10 @@ export const userBooking = userInfo => async dispatch => {
       body: JSON.stringify(userInfo),
     })
       .then(res => res.json())
-      .then(data => {
+      .then(data => { console.log(data)
         dispatch(setResult(data));
-      })
-      .catch((err) =>{
-          dispatch(resultError(err))
-      })
+      });
+      // .catch((err) =>{
+      //     dispatch(resultError(err))
+      // })
   };

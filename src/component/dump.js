@@ -68,7 +68,7 @@ const initialState = {
 }
 
 
-class FormSubmit extends Component {
+class FormKeep extends Component {
     constructor(props){
         super(props);
 
@@ -81,10 +81,8 @@ class FormSubmit extends Component {
     }
 
     handleSubmit = e => {
-      const { sendResult } = this.props
         e.preventDefault();
         console.log(this.state)
-        sendResult(this.state)
       };
 
   //   handleChange = e => {
@@ -617,4 +615,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FormSubmit);
+export default connect(mapStateToProps, mapDispatchToProps)(FormKeep);
