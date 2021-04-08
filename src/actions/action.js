@@ -9,7 +9,7 @@ const submitResult =
   "https://recruitbot.trikeapps.com/api/v1/roles/bellroy-tech-team-recruit/big_five_profile_submissions.";
 
 export const userResult = (userInfo) => async (dispatch) => {
-  await fetch(PROXY_URL+submitResult, {
+  await fetch(submitResult, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
