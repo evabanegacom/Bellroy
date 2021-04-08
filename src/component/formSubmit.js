@@ -119,16 +119,20 @@ class FormSubmit extends Component {
   handleConscientiousness = e => {
     const { CONSCIENTIOUSNESS } = this.state;
     const Facet = CONSCIENTIOUSNESS.Facets
-    const score = document.querySelector('.agreeScore')
-    const trust = document.querySelector('.trust')
-    const friend = document.querySelector('.friend')
+    const score = document.querySelector('.OverScore')
+    const efficacy = document.querySelector('.efficacy')
+    const orderly = document.querySelector('.orderly')
+    const dutiful = document.querySelector('.dutiful')
+    const achievement = document.querySelector('.achievement')
+    const discipline = document.querySelector('.discipline')
+    const cautious = document.querySelector('.cautious')
     CONSCIENTIOUSNESS['Overall Score'] = score.value;
-    Facet['Trust'] = trust.value
-    Facet['Morality'] = trust.value
-    Facet['Altruism'] = trust.value
-    Facet['Cooperation'] = trust.value
-    Facet['Modesty'] = trust.value
-    Facet['Sympathy'] = trust.value
+    Facet['Self-Efficacy'] = efficacy.value
+    Facet['Orderliness'] = orderly.value
+    Facet['Dutifulness'] = dutiful.value
+    Facet['Achievement-Striving'] = achievement.value
+    Facet['Self-Discipline'] = discipline.value
+    Facet['Cautiousness'] = cautious.value
     this.setState({
       CONSCIENTIOUSNESS,
     });
@@ -391,9 +395,99 @@ class FormSubmit extends Component {
                   autoComplete="off"
                   required
                   type="number"
-                  onChange={this.handleAgreeableness}
+                  onChange={this.handleConscientiousness}
                   placeholder="overall score"
-                  className='agreeScore'
+                  className='OverScore'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Self-Efficacy" className="email">
+                Self-Efficacy
+                <input
+                  id='Self-Efficacy'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleConscientiousness}
+                  placeholder="Self-Efficacy"
+                  className='efficacy'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Orderliness" className="email">
+                Orderliness
+                <input
+                  id='Orderliness'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleConscientiousness}
+                  placeholder="Orderliness"
+                  className='orderly'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Dutifulness" className="email">
+                Dutifulness
+                <input
+                  id='Dutifulness'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleConscientiousness}
+                  placeholder="Dutifulness"
+                  className='dutiful'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Achievement-Striving" className="email">
+                Achievement-Striving
+                <input
+                  id='Achievement-Striving'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleConscientiousness}
+                  placeholder="Achievement-Striving"
+                  className='achievement'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Self-Discipline" className="email">
+                Self-Discipline
+                <input
+                  id='Self-Discipline'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleConscientiousness}
+                  placeholder="Self-Discipline"
+                  className='discipline'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Cautiousness" className="email">
+                Cautiousness
+                <input
+                  id='Cautiousness'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleConscientiousness}
+                  placeholder="Cautiousness"
+                  className='cautious'
                 />
               </label>
             </div>
