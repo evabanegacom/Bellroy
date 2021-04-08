@@ -27,6 +27,18 @@ const initialState = {
         "Sympathy" : ''
       }
   },
+
+  "CONSCIENTIOUSNESS": {
+    "Overall Score": '',
+    Facets: {
+      "Self-Efficacy": '',
+      "Orderliness": '',
+      "Dutifulness": '',
+      "Achievement-Striving": '',
+      "Self-Discipline": '',
+      "Cautiousness" : ''
+    }
+},
 }
 
 
@@ -85,8 +97,32 @@ class FormSubmit extends Component {
     const Facet = AGREEABLENESS.Facets
     const score = document.querySelector('.agreeScore')
     const trust = document.querySelector('.trust')
-    const friend = document.querySelector('.friend')
+    const moral = document.querySelector('.moral')
+    const altrue = document.querySelector('.altrue')
+    const coop = document.querySelector('.coop')
+    const modest = document.querySelector('.modest')
+    const sympathy = document.querySelector('.sympathy')
     AGREEABLENESS['Overall Score'] = score.value;
+    Facet['Trust'] = trust.value
+    Facet['Morality'] = moral.value
+    Facet['Altruism'] = altrue.value
+    Facet['Cooperation'] = coop.value
+    Facet['Modesty'] = modest.value
+    Facet['Sympathy'] = sympathy.value
+    this.setState({
+      AGREEABLENESS,
+    });
+  }
+
+  // CONSCIENTIOUSNESS
+
+  handleConscientiousness = e => {
+    const { CONSCIENTIOUSNESS } = this.state;
+    const Facet = CONSCIENTIOUSNESS.Facets
+    const score = document.querySelector('.agreeScore')
+    const trust = document.querySelector('.trust')
+    const friend = document.querySelector('.friend')
+    CONSCIENTIOUSNESS['Overall Score'] = score.value;
     Facet['Trust'] = trust.value
     Facet['Morality'] = trust.value
     Facet['Altruism'] = trust.value
@@ -94,9 +130,10 @@ class FormSubmit extends Component {
     Facet['Modesty'] = trust.value
     Facet['Sympathy'] = trust.value
     this.setState({
-      AGREEABLENESS,
+      CONSCIENTIOUSNESS,
     });
   }
+
 
     render() {
         return (
@@ -266,6 +303,97 @@ class FormSubmit extends Component {
                   onChange={this.handleAgreeableness}
                   placeholder="Trust"
                   className='trust'
+                />
+              </label>
+            </div>
+            
+            <div className="control">
+              <label htmlFor="Morality" className="email">
+                Morality
+                <input
+                  id='Morality'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleAgreeableness}
+                  placeholder="Morality"
+                  className='moral'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Altruism" className="email">
+                Altruism
+                <input
+                  id='Altruism'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleAgreeableness}
+                  placeholder="Altruism"
+                  className='altrue'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Cooperation" className="email">
+                Cooperation
+                <input
+                  id='Cooperation'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleAgreeableness}
+                  placeholder="Cooperation"
+                  className='coop'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Modesty" className="email">
+                Modesty
+                <input
+                  id='Modesty'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleAgreeableness}
+                  placeholder="Modesty"
+                  className='modest'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+              <label htmlFor="Sympathy" className="email">
+                Sympathy
+                <input
+                  id='Sympathy'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleAgreeableness}
+                  placeholder="Sympathy"
+                  className='sympathy'
+                />
+              </label>
+            </div>
+
+            <div className="control">
+            <p style={{ color: 'cyan', marginBottom: '10px', fontWeight: '700'}}>CONSCIENTIOUSNESS</p>
+              <label htmlFor="Overall Score" className="email">
+                overall score
+                <input
+                  id='Overall Score'
+                  autoComplete="off"
+                  required
+                  type="number"
+                  onChange={this.handleAgreeableness}
+                  placeholder="overall score"
+                  className='agreeScore'
                 />
               </label>
             </div>
