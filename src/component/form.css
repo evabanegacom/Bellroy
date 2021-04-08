@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+  background: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+form div {
+  width: 100%;
+  margin-top: 20px;
+}
+
+form label,
+form input {
+    width: 100%;
+}
+
+form label {
+    color: white;
+}
+
+input {
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
