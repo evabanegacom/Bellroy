@@ -1,5 +1,5 @@
 const setResult = payload => ({ type: 'SET_RESULT', payload})
-
+// eslint-disable-next-line
 const resultError = error => ({ type: 'SET_ERROR', error})
 
 const submitResult = 'https://recruitbot.trikeapps.com/api/v1/roles/bellroy-tech-team-recruit/big_five_profile_submissions'
